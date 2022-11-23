@@ -9,7 +9,7 @@
 
 &mt {
   flavor = "balanced";
-  tapping-term-ms = <50>;
+  tapping-term-ms = <100>;
 };
 
 / { 
@@ -72,7 +72,7 @@
     default_layer {
       bindings = <
         &kp Q        &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &b_umlaut_o   &kp P 
-        &mt LCTRL A  &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &mt RCTRL SEMI
+        &b_umlaut_a  &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &mt RCTRL SEMI
         &mt LSHIFT Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &mt RSHIFT SLASH
         &kp LALT     &kp BACKSPACE                &lt SPECIAL ENTER     &lt NUMBERS SPACE
       >;
