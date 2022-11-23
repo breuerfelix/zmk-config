@@ -8,8 +8,8 @@
 #define NUMBERS 2
 
 &mt {
-  flavor = "hold-preferred";
-  tapping_term_ms = TIMEOUT;
+  flavor = "balanced";
+  tapping-term-ms = <150>;
 };
 
 / { 
@@ -80,9 +80,9 @@
 
     special_layer {
       bindings = <
-        &shift_tab &none    &kp UP   &none     &none          &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
+        &kp ESC    &none    &kp UP   &none     &none          &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
         &kp TAB    &kp LEFT &kp DOWN &kp RIGHT &kp TILDE      &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
-        &none      &none    &none    &none     &none          &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
+        &shift_tab &none    &none    &none     &none          &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
         &none      &none                                      &none     &none
       >;
     };
