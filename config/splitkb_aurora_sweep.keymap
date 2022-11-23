@@ -65,7 +65,7 @@
           label = "B_UMLAUT_A";
           #binding-cells = <0>;
           tapping-term-ms = TIMEOUT;
-          bindings = <&kp Q>, <&m_umlaut_a>;
+          bindings = <&kp A>, <&m_umlaut_a>;
       };
 
       b_umlaut_o: b_umlaut_o {
@@ -90,10 +90,10 @@
 
     default_layer {
       bindings = <
-        &b_umlaut_a  &kp W &kp E &kp R &kp T      &kp Y &b_umlaut_u     &kp I     &b_umlaut_o   &kp P 
-        &mt LCTRL A  &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &mt RCTRL SEMI
+        &kp Q        &kp W &kp E &kp R &kp T      &kp Y &b_umlaut_u     &kp I   &b_umlaut_o   &kp P 
+        &b_umlaut_a  &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI
         &mt LSHIFT Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &mt RSHIFT SLASH
-        &kp LALT     &kp BACKSPACE                &lt SPECIAL ENTER     &lt NUMBERS SPACE
+        &kp LCTRL    &kp BACKSPACE                &lt NUMBERS ENTER     &lt SPECIAL SPACE
       >;
     };
 
@@ -102,7 +102,7 @@
         &kp ESC    &none    &kp UP   &none     &none          &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
         &kp TAB    &kp LEFT &kp DOWN &kp RIGHT &kp TILDE      &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
         &shift_tab &none    &none    &none     &none          &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
-        &none      &none                                      &none     &none
+        &LALT      &none                                      &none     &none
       >;
     };
 
