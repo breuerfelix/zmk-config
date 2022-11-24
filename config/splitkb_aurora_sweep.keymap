@@ -21,6 +21,7 @@
       tapping-term-ms = <150>;
       quick-tap-ms = <0>;
       flavor = "tap-preferred";
+      bindings = <>, <>;
     };
   };
 
