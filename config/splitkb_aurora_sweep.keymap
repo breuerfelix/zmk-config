@@ -48,8 +48,8 @@
 
     special {
       bindings = <
-        &kp ESC     &none    &kp UP   &none     &none        &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
-        &kp TAB     &kp LEFT &kp DOWN &kp RIGHT &kp TILDE    &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
+        &kp TAB     &none    &kp UP   &none     &none        &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
+        &kp ESC     &kp LEFT &kp DOWN &kp RIGHT &kp TILDE    &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
         &shift_tab  &none    &none    &none     &none        &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
         &kp LGUI    &trans                                   &none     &none
       >;
