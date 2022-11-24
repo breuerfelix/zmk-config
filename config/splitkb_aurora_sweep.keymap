@@ -51,7 +51,7 @@
         &kp ESC     &none    &kp UP   &none     &none        &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
         &kp TAB     &kp LEFT &kp DOWN &kp RIGHT &kp TILDE    &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
         &shift_tab  &none    &none    &none     &none        &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
-        &none       &trans                                   &none     &none
+        &kp LGUI    &trans                                   &none     &none
       >;
     };
 
@@ -66,9 +66,9 @@
 
     util {
       bindings = <
-        &bt BT_CLR   &bt BT_PRV   &bt BT_NXT   &none        &none           &none &none &none &none &none
-        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5    &none &none &none &none &none
-        &none        &none        &none        &none        &none           &none &none &none &none &none
+        &bt BT_CLR   &bt BT_PRV   &bt BT_NXT   &none        &none           &none &kp C_PREV   &kp C_NEXT   &kp C_PP   &none
+        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &none
+        &none        &none        &none        &none        &none           &none &none        &none        &none      &none
         &none        &none                                                  &none &none
       >;
     };
@@ -81,6 +81,5 @@
                           &none &none      &none &none
       >;
     };
-
   };
 };
