@@ -14,14 +14,14 @@
 
 / {
   behaviors {
-    umlaut: umlaut {
+    umlaut_o: umlaut_o {
       compatible = "zmk,behavior-hold-tap";
-      label = "UMLAUT";
-      #binding-cells = <2>;
+      label = "UMLAUT_O";
+      #binding-cells = <0>;
       tapping-term-ms = <150>;
       quick-tap-ms = <0>;
       flavor = "tap-preferred";
-      bindings = <>, <&kp>;
+      bindings = <&m_umlaut_o>, <&kp O>;
     };
   };
 
@@ -87,7 +87,7 @@
 
     default_layer {
       bindings = <
-        &kp Q        &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &umlaut &m_umlaut_o O   &kp P 
+        &kp Q        &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &umlaut_o   &kp P 
         &kp A        &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI
         &mt LSHIFT Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &mt RSHIFT SLASH
         &kp LALT     &kp BACKSPACE                &mt LCTRL ENTER       &lt SPECIAL SPACE
