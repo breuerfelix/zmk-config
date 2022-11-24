@@ -93,16 +93,16 @@
         &kp Q        &kp W &kp E &kp R &kp T      &kp Y &b_umlaut_u     &kp I   &b_umlaut_o   &kp P 
         &b_umlaut_a  &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI
         &mt LSHIFT Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &mt RSHIFT SLASH
-        &kp LCTRL    &kp BACKSPACE                &lt NUMBERS ENTER     &lt SPECIAL SPACE
+        &kp LCTRL    &kp BACKSPACE                &lt LALT ENTER     &lt SPECIAL SPACE
       >;
     };
 
     special_layer {
       bindings = <
-        &kp ESC    &none    &kp UP   &none     &none          &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
-        &kp TAB    &kp LEFT &kp DOWN &kp RIGHT &kp TILDE      &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
-        &shift_tab &none    &none    &none     &none          &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
-        &kp LALT      &none                                      &none     &none
+        &kp ESC     &none    &kp UP   &none     &none          &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
+        &kp TAB     &kp LEFT &kp DOWN &kp RIGHT &kp TILDE      &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
+        &shift_tab  &none    &none    &none     &none          &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
+        &mo NUMBERS &none                                      &none     &none
       >;
     };
 
