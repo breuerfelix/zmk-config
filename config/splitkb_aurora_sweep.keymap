@@ -59,59 +59,33 @@
       };
   };
 
-  behaviors {
-      b_umlaut_a: b_umlaut_a {
-          compatible = "zmk,behavior-tap-dance";
-          label = "B_UMLAUT_A";
-          #binding-cells = <0>;
-          tapping-term-ms = TIMEOUT;
-          bindings = <&kp A>, <&m_umlaut_a>;
-      };
-
-      b_umlaut_o: b_umlaut_o {
-          compatible = "zmk,behavior-tap-dance";
-          label = "B_UMLAUT_O";
-          #binding-cells = <0>;
-          tapping-term-ms = TIMEOUT;
-          bindings = <&kp O>, <&m_umlaut_o>;
-      };
-
-      b_umlaut_u: b_umlaut_u {
-          compatible = "zmk,behavior-tap-dance";
-          label = "B_UMLAUT_U";
-          #binding-cells = <0>;
-          tapping-term-ms = TIMEOUT;
-          bindings = <&kp U>, <&m_umlaut_u>;
-      };
-  };
-
   keymap {
     compatible = "zmk,keymap";
 
     default_layer {
       bindings = <
-        &kp Q        &kp W &kp E &kp R &kp T      &kp Y &b_umlaut_u     &kp I   &b_umlaut_o   &kp P 
-        &b_umlaut_a  &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI
+        &kp Q        &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &kp O   &kp P 
+        &kp A        &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI
         &mt LSHIFT Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &mt RSHIFT SLASH
-        &kp LCTRL    &kp BACKSPACE                &lt LGUI ENTER        &lt SPECIAL SPACE
+        &kp LCTRL    &kp BACKSPACE                &lt LALT ENTER        &lt SPECIAL SPACE
       >;
     };
 
     special_layer {
       bindings = <
-        &kp ESC     &none    &kp UP   &none     &none          &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
-        &kp TAB     &kp LEFT &kp DOWN &kp RIGHT &kp TILDE      &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
-        &shift_tab  &none    &none    &none     &none          &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
-        &mo NUMBERS &none                                      &none     &none
+        &kp ESC     &none       &kp UP      &none       &none          &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
+        &kp TAB     &kp LEFT    &kp DOWN    &kp RIGHT   &kp TILDE      &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
+        &shift_tab  &m_umlaut_a &m_umlaut_u &m_umlaut_o &none          &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
+        &mo NUMBERS &none                                              &none     &none
       >;
     };
 
     numbers_layer {
       bindings = <
-        &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp F11 &kp F12
-        &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp N6    &kp N7   &kp N8   &kp N9  &kp N0
-        &kp F1   &kp F2 &kp F3   &kp F4   &kp F5      &kp F6    &kp F7   &kp F8   &kp F9  &kp F10
-        &none   &none                                 &none     &none
+        &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp STAR &kp F11 &kp F12
+        &kp N1   &kp N2 &kp N3   &kp N4   &kp N5         &kp N6    &kp N7   &kp N8   &kp N9  &kp N0
+        &kp F1   &kp F2 &kp F3   &kp F4   &kp F5         &kp F6    &kp F7   &kp F8   &kp F9  &kp F10
+        &none    &none                                   &none     &none
       >;
     };
 
