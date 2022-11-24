@@ -34,60 +34,45 @@
   };
 
   macros {
-    m_umlaut_a: m_umlaut_a {
-      label = "M_UMLAUT_A";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
+    ZMK_MACRO(m_umlaut_a,
       bindings
         = <&macro_press &kp RALT>
         , <&macro_tap &kp A>
         , <&macro_release &kp RALT>
       ;
-    };
+    )
 
-    m_umlaut_o: m_umlaut_o {
-      label = "M_UMLAUT_O";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
+    ZMK_MACRO(m_umlaut_o,
       bindings
         = <&macro_press &kp RALT>
         , <&macro_tap &kp O>
         , <&macro_release &kp RALT>
       ;
-    };
+    )
 
-      m_umlaut_u: m_umlaut_u {
-          label = "M_UMLAUT_U";
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-              = <&macro_press &kp RALT>
-              , <&macro_tap &kp U>
-              , <&macro_release &kp RALT>
-              ;
-      };
+    ZMK_MACRO(m_umlaut_u,
+      bindings
+        = <&macro_press &kp RALT>
+        , <&macro_tap &kp U>
+        , <&macro_release &kp RALT>
+      ;
+    )
 
-      m_umlaut_s: m_umlaut_s {
-          label = "M_UMLAUT_S";
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-              = <&macro_press &kp RALT>
-              , <&macro_tap &kp S>
-              , <&macro_release &kp RALT>
-              ;
-      };
+    ZMK_MACRO(m_umlaut_s,
+      bindings
+        = <&macro_press &kp RALT>
+        , <&macro_tap &kp S>
+        , <&macro_release &kp RALT>
+      ;
+    )
 
-      shift_tab: shift_tab {
-          label = "SHIFT_TAB";
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-              = <&macro_press &kp LSHIFT>
-              , <&macro_tap &kp TAB>
-              , <&macro_release &kp LSHIFT>
-              ;
-      };
+    ZMK_MACRO(shift_tab,
+      bindings
+        = <&macro_press &kp LSHIFT>
+        , <&macro_tap &kp TAB>
+        , <&macro_release &kp LSHIFT>
+      ;
+    )
   };
 
   keymap {
