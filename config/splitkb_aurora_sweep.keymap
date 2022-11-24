@@ -21,51 +21,9 @@
       tapping-term-ms = TIMEOUT;
       bindings = <&kp LALT>, <&mo NUMBERS>;
     };
-
-    umlaut_o: umlaut_o {
-      compatible = "zmk,behavior-hold-tap";
-      label = "UMLAUT_O";
-      #binding-cells = <2>;
-      tapping-term-ms = <150>;
-      quick-tap-ms = <0>;
-      flavor = "tap-preferred";
-      bindings = <&m_umlaut_o>, <&kp>;
-    };
   };
 
   macros {
-    ZMK_MACRO(m_umlaut_a,
-      bindings
-        = <&macro_press &kp RALT>
-        , <&macro_tap &kp A>
-        , <&macro_release &kp RALT>
-      ;
-    )
-
-    ZMK_MACRO(m_umlaut_o,
-      bindings
-        = <&macro_press &kp RALT>
-        , <&macro_tap &kp O>
-        , <&macro_release &kp RALT>
-      ;
-    )
-
-    ZMK_MACRO(m_umlaut_u,
-      bindings
-        = <&macro_press &kp RALT>
-        , <&macro_tap &kp U>
-        , <&macro_release &kp RALT>
-      ;
-    )
-
-    ZMK_MACRO(m_umlaut_s,
-      bindings
-        = <&macro_press &kp RALT>
-        , <&macro_tap &kp S>
-        , <&macro_release &kp RALT>
-      ;
-    )
-
     ZMK_MACRO(shift_tab,
       bindings
         = <&macro_press &kp LSHIFT>
@@ -80,19 +38,19 @@
 
     default_layer {
       bindings = <
-        &kp Q        &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &kp O   &kp P 
-        &kp A        &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI
-        &mt LSHIFT Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &mt RSHIFT SLASH
-        &number_layer     &kp BACKSPACE                &mt LCTRL ENTER       &lt SPECIAL SPACE
+        &kp Q         &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &kp O   &kp P 
+        &kp A         &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI
+        &mt LSHIFT Z  &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &mt RSHIFT SLASH
+        &number_layer &kp BACKSPACE                &mt LCTRL ENTER       &lt SPECIAL SPACE
       >;
     };
 
     special_layer {
       bindings = <
-        &kp ESC     &none       &kp UP      &none       &none          &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
-        &kp TAB     &kp LEFT    &kp DOWN    &kp RIGHT   &kp TILDE      &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
-        &shift_tab  &m_umlaut_a &m_umlaut_u &m_umlaut_o &m_umlaut_s    &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
-        &mo NUMBERS &none                                              &none     &none
+        &kp ESC    &none    &kp UP   &none     &none        &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
+        &kp TAB    &kp LEFT &kp DOWN &kp RIGHT &kp TILDE    &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
+        &shift_tab &none    &none    &none     &none        &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
+        &none      &none                                    &none     &none
       >;
     };
 
@@ -101,7 +59,7 @@
         &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp STAR &kp F11 &kp F12
         &kp N1   &kp N2 &kp N3   &kp N4   &kp N5         &kp N6    &kp N7   &kp N8   &kp N9  &kp N0
         &kp F1   &kp F2 &kp F3   &kp F4   &kp F5         &kp F6    &kp F7   &kp F8   &kp F9  &kp F10
-        &none    &none                                   &none     &none
+        &none    &none                                   &BACKSPACE         &DOT
       >;
     };
 
