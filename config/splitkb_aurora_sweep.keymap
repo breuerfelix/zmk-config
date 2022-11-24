@@ -12,29 +12,41 @@
   tapping-term-ms = <150>;
 };
 
-/ { 
-  macros {
-      m_umlaut_a: m_umlaut_a {
-          label = "M_UMLAUT_A";
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-              = <&macro_press &kp RALT>
-              , <&macro_tap &kp A>
-              , <&macro_release &kp RALT>
-              ;
-      };
+/ {
+  behaviors {
+    umlaut: umlaut {
+      compatible = "zmk,behavior-hold-tap";
+      label = "UMLAUT";
+      #binding-cells = <2>;
+      tapping-term-ms = <150>;
+      quick-tap-ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <>, <&kp>;
+    };
+  };
 
-      m_umlaut_o: m_umlaut_o {
-          label = "M_UMLAUT_O";
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-              = <&macro_press &kp RALT>
-              , <&macro_tap &kp O>
-              , <&macro_release &kp RALT>
-              ;
-      };
+  macros {
+    m_umlaut_a: m_umlaut_a {
+      label = "M_UMLAUT_A";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+        = <&macro_press &kp RALT>
+        , <&macro_tap &kp A>
+        , <&macro_release &kp RALT>
+      ;
+    };
+
+    m_umlaut_o: m_umlaut_o {
+      label = "M_UMLAUT_O";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+        = <&macro_press &kp RALT>
+        , <&macro_tap &kp O>
+        , <&macro_release &kp RALT>
+      ;
+    };
 
       m_umlaut_u: m_umlaut_u {
           label = "M_UMLAUT_U";
@@ -75,7 +87,7 @@
 
     default_layer {
       bindings = <
-        &kp Q        &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     <&ht_tp &m_umlaut_o O>   &kp P 
+        &kp Q        &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I     &umlaut &m_umlaut_o O   &kp P 
         &kp A        &kp S &kp D &kp F &kp G      &kp H &kp J &kp K     &kp L   &kp SEMI
         &mt LSHIFT Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp COMMA &kp DOT &mt RSHIFT SLASH
         &kp LALT     &kp BACKSPACE                &mt LCTRL ENTER       &lt SPECIAL SPACE
