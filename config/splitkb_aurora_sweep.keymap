@@ -47,6 +47,17 @@
               ;
       };
 
+      m_umlaut_s: m_umlaut_s {
+          label = "M_UMLAUT_S";
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+              = <&macro_press &kp RALT>
+              , <&macro_tap &kp S>
+              , <&macro_release &kp RALT>
+              ;
+      };
+
       shift_tab: shift_tab {
           label = "SHIFT_TAB";
           compatible = "zmk,behavior-macro";
@@ -75,7 +86,7 @@
       bindings = <
         &kp ESC     &none       &kp UP      &none       &none          &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
         &kp TAB     &kp LEFT    &kp DOWN    &kp RIGHT   &kp TILDE      &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
-        &shift_tab  &m_umlaut_a &m_umlaut_u &m_umlaut_o &none          &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
+        &shift_tab  &m_umlaut_a &m_umlaut_u &m_umlaut_o &m_umlaut_s    &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
         &mo NUMBERS &none                                              &none     &none
       >;
     };
