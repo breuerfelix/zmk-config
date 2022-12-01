@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define TIMEOUT <200>
-#define COMBO_TIMEOUT <30>
 #define DEFAULT 0
 #define SPECIAL 1
 #define NUMBERS 2
@@ -15,21 +14,6 @@
 };
 
 / {
-  combos {
-      compatible = "zmk,combos";
-      equal {
-          timeout-ms = COMBO_TIMEOUT;
-          key-positions = <7 8>;
-          bindings = <&kp EQUAL>;
-      };
-
-      star {
-          timeout-ms = COMBO_TIMEOUT;
-          key-positions = <6 7>;
-          bindings = <&kp STAR>;
-      };
-  };
-
   behaviors {
     number_layer: number_layer {
       compatible = "zmk,behavior-tap-dance";
