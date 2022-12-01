@@ -64,9 +64,9 @@
 
     special {
       bindings = <
-        &kp TAB     &kp PRCNT &kp UP   &kp STAR  &kp AMPS     &kp PLUS  &kp LBRC &kp RBRC &kp BSLH  &kp PIPE
+        &kp TAB     &kp PRCNT &kp UP   &kp STAR  &kp AMPS     &kp PLUS  &kp LBRC &kp RBRC &kp SQT   &kp DQT
         &kp ESC     &kp LEFT  &kp DOWN &kp RIGHT &kp EXCL     &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
-        &shift_tab  &kp DLLR  &kp AT   &kp HASH  &kp TILDE    &kp GRAVE &kp LPAR &kp RPAR &kp SQT   &kp DQT
+        &shift_tab  &kp DLLR  &kp AT   &kp HASH  &kp TILDE    &kp GRAVE &kp LPAR &kp RPAR &kp BSLH  &kp PIPE
         &none       &trans                                    &none     &sk LGUI
       >;
     };
