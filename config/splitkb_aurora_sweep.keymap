@@ -14,16 +14,6 @@
 };
 
 / {
-  behaviors {
-    number_layer: number_layer {
-      compatible = "zmk,behavior-tap-dance";
-      label = "NUMBER_LAYER";
-      #binding-cells = <0>;
-      tapping-term-ms = TIMEOUT;
-      bindings = <&mo SPECIAL>, <&mo NUMBERS>;
-    };
-  };
-
   macros {
     ZMK_MACRO(shift_tab,
       bindings
@@ -39,36 +29,36 @@
 
     default {
       bindings = <
-        &kp Q         &kp W &kp E &kp R &kp T      &kp Y &kp U   &kp I     &kp O   &kp P 
-        &kp A         &kp S &kp D &kp F &kp G      &kp H &kp J   &kp K     &kp L   &kp SEMI
-        &mt LSHIFT Z  &kp X &kp C &kp V &kp B      &kp N &kp M   &kp COMMA &kp DOT &mt RSHIFT SLASH
-        &number_layer &mt LCTRL ENTER              &kp BACKSPACE &mt LALT SPACE
+        &kp Q       &kp W &kp E &kp R &kp T      &kp Y &kp U   &kp I &kp O &kp P 
+        &kp LCTRL   &kp S &kp D &kp F &kp G      &kp H &kp J   &kp K &kp L &mo special
+        &kp LSHIFT  &kp X &kp C &kp V &kp B      &kp N &kp M   &kp Z &kp A &kp RSHIFT
+        &mo numbers &mt LALT ENTER               &kp BACKSPACE &kp SPACE
       >;
     };
 
     special {
       bindings = <
-        &kp TAB     &kp PRCNT &kp UP   &kp STAR  &kp AMPS     &kp PLUS  &kp LBRC &kp RBRC &kp SQT   &kp DQT
-        &kp ESC     &kp LEFT  &kp DOWN &kp RIGHT &kp EXCL     &kp EQUAL &kp LBKT &kp RBKT &kp MINUS &kp UNDER
-        &shift_tab  &kp DLLR  &kp AT   &kp HASH  &kp TILDE    &kp GRAVE &kp LPAR &kp RPAR &kp BSLH  &kp PIPE
-        &none       &trans                                    &none     &sk LGUI
+        &kp PLUS  &kp UNDER &kp LBRC &kp RBRC &kp PIPE     &kp TAB       &kp GRAVE &kp UP   &sk LGUI  &none
+        &kp COLON &kp SEMI  &kp LPAR &kp RPAR &kp BSLH     &kp ESC       &kp LEFT  &kp DOWN &kp RIGHT &none
+        &kp QMARK &kp SQT   &kp LBKT &kp RBKT &kp DQT      &shift_tab    &kp TILDE &none    &none     &none
+        &mo util  &kp ENTER                                &kp BACKSPACE &kp SPACE
       >;
     };
 
     numbers {
       bindings = <
-        &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp STAR &kp F11 &kp F12
-        &kp N1   &kp N2 &kp N3   &kp N4   &kp N5         &kp N6    &kp N7   &kp N8   &kp N9  &kp N0
-        &kp F1   &kp F2 &kp F3   &kp F4   &kp F5         &kp F6    &kp F7   &kp F8   &kp F9  &kp F10
-        &none    &none                                   &kp BACKSPACE      &mo UTIL
+        &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp STAR  &kp MINUS &kp EQUAL
+        &kp N1   &kp N2 &kp N3   &kp N4   &kp N5         &kp N6    &kp N7   &kp N8    &kp N9    &kp N0
+        &none    &none  &none    &none    &none          &kp LT    &kp GT   &kp COMMA &kp DOT   &kp SLASH
+        &none    &none                                   &kp BACKSPACE      &kp SPACE
       >;
     };
 
     util {
       bindings = <
-        &bt BT_CLR   &bt BT_PRV   &bt BT_NXT   &none        &none           &none &kp C_PREV   &kp C_NEXT   &kp C_PP   &none
-        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &none
-        &none        &none        &none        &none        &none           &none &none        &none        &none      &none
+        &bt BT_CLR   &bt BT_PRV   &bt BT_NXT   &none        &none           &kp C_PREV   &kp C_NEXT   &kp C_PP   &none &none
+        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &none &none
+        &none        &none        &none        &none        &none           &none &none  &none        &none      &none
         &none        &none                                                  &none &none
       >;
     };
