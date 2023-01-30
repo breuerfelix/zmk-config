@@ -30,9 +30,9 @@
     default {
       bindings = <
         &kp Q       &kp W &kp E &kp R &kp T      &kp Y &kp U   &kp I &kp O &kp P
-        &kp LCTRL   &kp S &kp D &kp F &kp G      &kp H &kp J   &kp K &kp L &mo special
+        &kp LCTRL   &kp S &kp D &kp F &kp G      &kp H &kp J   &kp K &kp L &mo SPECIAL
         &kp LSHIFT  &kp X &kp C &kp V &kp B      &kp N &kp M   &kp Z &kp A &kp RSHIFT
-        &mo numbers &mt LALT ENTER               &kp BACKSPACE &kp SPACE
+        &mo NUMBERS &mt LALT ENTER               &kp BACKSPACE &kp SPACE
       >;
     };
 
@@ -41,7 +41,7 @@
         &kp PLUS  &kp UNDER &kp LBRC &kp RBRC &kp PIPE     &kp TAB       &kp GRAVE &kp UP   &sk LGUI  &none
         &kp COLON &kp SEMI  &kp LPAR &kp RPAR &kp BSLH     &kp ESC       &kp LEFT  &kp DOWN &kp RIGHT &none
         &kp QMARK &kp SQT   &kp LBKT &kp RBKT &kp DQT      &shift_tab    &kp TILDE &none    &none     &none
-        &mo util  &kp ENTER                                &kp BACKSPACE &kp SPACE
+        &mo UTIL  &kp ENTER                                &kp BACKSPACE &kp SPACE
       >;
     };
 
